@@ -244,7 +244,7 @@ type InputProps = {
   required: boolean
 }
 
-// The following component is an example of your existing Input Component
+// 다음 컴포넌트는 이미 존재하던 당신의 입력 컴포넌트의 예시에요.
 const Input = ({ label, register, required }: InputProps) => (
   <>
     <label>{label}</label>
@@ -286,7 +286,7 @@ const App = () => {
 ```javascript copy sandbox="https://codesandbox.io/s/react-hook-form-adapting-existing-form-llbnn"
 import { useForm } from "react-hook-form"
 
-// The following component is an example of your existing Input Component
+// 다음 컴포넌트는 이미 존재하던 당신의 입력 컴포넌트의 예시에요.
 const Input = ({ label, register, required }) => (
   <>
     <label>{label}</label>
@@ -324,9 +324,9 @@ const App = () => {
 
 </TabGroup>
 
-## Integrating with UI libraries {#IntegratingwithUIlibraries}
+## UI 라이브러리와 통합하기 {#IntegratingwithUIlibraries}
 
-React Hook Form has made it easy to integrate with external UI component libraries. If the component doesn't expose input's `ref`, then you should use the [Controller](/docs#Controller) component, which will take care of the registration process.
+React Hook Form은 외부 UI 컴포넌트 라이브러리와 통합하기 쉽게 만들었어요. 만약 컴포넌트가 Input의 ref를 노출하지 않는다면, Controller 컴포넌트를 사용해야 해요. 이 컴포넌트는 register 과정을 처리해 줄 거에요.
 
 <TabGroup buttonLabels={["TS", "JS"]} >
 
@@ -424,9 +424,9 @@ const App = () => {
 
 </TabGroup>
 
-## Integrating Controlled Inputs {#IntegratingControlledInputs}
+## Controlled Inputs과 통합하기 {#IntegratingControlledInputs}
 
-This library embraces uncontrolled components and native HTML inputs. However, it's hard to avoid working with external controlled components such as [React-Select](https://github.com/JedWatson/react-select), [AntD](https://github.com/ant-design/ant-design) and [MUI](https://mui.com/). To make this simple, we provide a wrapper component, [Controller](/docs#Controller), to streamline the integration process while still giving you the freedom to use a custom register.
+이 라이브러리는 비제어 컴포넌트와 기본 HTML 입력을 지지해요. 그러나 [React-Select](https://github.com/JedWatson/react-select), [AntD](https://github.com/ant-design/ant-design) 및 [MUI](https://mui.com/)와 같은 외부 제어(Controlled) 컴포넌트와 작업하는 것을 피하기는 어려워요. 이를 간단하게 만들기 위해, [Controller](/docs#Controller)라는 래퍼(Wrapper) 컴포넌트를 제공해요. 이 컴포넌트는 통합 과정을 간소화하면서도 사용자 정의 register를 사용할 수 있게 자유를 줍니다.
 
 #### Using Component API
 
@@ -480,11 +480,11 @@ function Input({ control, name }) {
 
   return (
     <TextField
-      onChange={field.onChange} // send value to hook form
+      onChange={field.onChange} // hook form 에게 value를 보내요
       onBlur={field.onBlur} // notify when input is touched/blur
       value={field.value} // input value
       name={field.name} // send down the input name
-      inputRef={field.ref} // send input ref, so we can focus on input when error appear
+      inputRef={field.ref} // send input ref, 우리는 에러가 발생했을때 input 에 집중할 수 있어요
     />
   )
 }
@@ -564,9 +564,9 @@ function Input({ control, name }) {
 
 </TabGroup>
 
-## Integrating with global state {#Integratingwithglobalstate}
+## 전역 상태관리 툴과 통합하기 {#Integratingwithglobalstate}
 
-This library doesn't require you to rely on a state management library, but you can easily integrate with them.
+이 라이브러리는 상태 관리 라이브러리에 의존하도록 요구하지 않지만, 필요한 경우 쉽게 통합할 수 있어요.
 
 ```javascript copy
 import { useForm } from "react-hook-form"
@@ -599,9 +599,9 @@ connect(
 )(YourForm)
 ```
 
-## Handle errors {#Handleerrors}
+## 에러 다루기 {#Handleerrors}
 
-React Hook Form provides an `errors` object to show you the errors in the form. `errors`' type will return given validation constraints. The following example showcases a required validation rule.
+React Hook Form은 `errors` 객체를 제공해서 폼에서 발생한 오류를 보여줄 수 있어요. `errors`의 타입은 지정된 벨리데이션 규칙을 반환할 거에요. 다음 예제는 필수인 경우 벨리데이션 규칙을 보여줍니다.
 
 ```javascript copy sandbox="https://codesandbox.io/s/react-hook-form-v7-errormessage-multiple-error-messages-3ur2z"
 import { useForm } from "react-hook-form"
@@ -636,9 +636,9 @@ export default function App() {
 }
 ```
 
-## Integrating with services {#Integratingwithservices}
+## 서비스와 통합하기 {#Integratingwithservices}
 
-To integrate React Hook Form with a service, you can use the library's built-in submission handling. `<Form />` component allow you to easily send form data to an API endpoint or other service. [Find out more about Form component](/docs/useform/form).
+React Hook Form을 서비스와 통합하려면 라이브러리의 내장 submission 처리 기능을 사용할 수 있어요. `<Form />` 컴포넌트를 사용하면 폼 데이터를 API 엔드포인트나 다른 서비스로 쉽게 보낼 수 있어요. [Form 컴포넌트에 대해 더 알아보기](/docs/useform/form).
 
 ```javascript
 import { Form } from "react-hook-form"
@@ -666,17 +666,17 @@ function App() {
 }
 ```
 
-## Schema Validation {#SchemaValidation}
+## 스키마(Schema) 벨리데이션 {#SchemaValidation}
 
-We also support schema-based form validation with [Yup](https://github.com/jquense/yup), [Zod](https://github.com/vriad/zod) , [Superstruct](https://github.com/ianstormtaylor/superstruct) & [Joi](https://github.com/hapijs/joi), where you can pass your `schema` to [useForm](/docs#useForm) as an optional config. It will validate your input data against the schema and return with either [errors](/docs#errors) or a valid result.
+또한 Yup, Zod, Superstruct 및 Joi와 같은 스키마 기반 폼 벨리데이션을 지원해요. 원하는 경우 schema를 useForm에 옵션으로 전달하여 사용할 수 있어요. 이렇게 하면 입력 데이터를 스키마에 대해 검증하고 errors 또는 유효한 결과를 반환할 거에요.
 
-**Step 1:** Install `Yup` into your project.
+단계 1: Yup을 프로젝트에 설치하세요.
 
 ```bash copy
 npm install @hookform/resolvers yup
 ```
 
-**Step 2:** Prepare your schema for validation and register inputs with React Hook Form.
+단계 2: 검증을 위한 스키마를 준비하고 Input을 React Hook Form에서 register하세요.
 
 ```javascript copy sandbox="https://codesandbox.io/s/react-hook-form-v7-validationschema-rm35t"
 import { useForm } from "react-hook-form"
@@ -716,7 +716,7 @@ export default function App() {
 
 ## React Native {#ReactNative}
 
-You will get the same performance boost and enhancement in React Native. To integrate with input component, you can wrap it with `Controller`.
+React Native에서도 동일한 성능 향상과 기능 향상을 얻을 수 있어요. Input 컴포넌트를 통합하려면 Controller로 감싸면 됩니다.
 
 ```javascript copy sandbox="https://snack.expo.io/@bluebill1049/react-hook-form-v7---controller" expo
 import { Text, View, TextInput, Button, Alert } from "react-native"
@@ -778,7 +778,7 @@ export default function App() {
 
 ## TypeScript {#TypeScript}
 
-React Hook Form is built with `TypeScript`, and you can define a `FormData` type to support form values.
+React Hook Form은 TypeScript로 구축되어 있으며, 폼 값 지원을 위해 FormData 타입을 정의할 수 있어요.
 
 ```typescript copy sandbox="https://codesandbox.io/s/react-hook-form-typescript-qwk7b"
 import * as React from "react"
@@ -820,16 +820,16 @@ export default function App() {
 }
 ```
 
-## Design and philosophy {#Designandphilosophy}
+## 디자인 철학 {#Designandphilosophy}
 
-React Hook Form's design and philosophy focus on user and developer experience. The library aims to provide users with a smoother interaction experience by fine-tuning the performance and improving accessibility. Some of the performance enhancements include:
+React Hook Form의 디자인과 철학은 사용자와 개발자 경험에 초점을 맞추고 있어요. 이 라이브러리는 성능을 최적화하고 접근성을 개선하여 사용자가 더 원활한 상호 작용 경험을 얻을 수 있도록 하려고 해요. 성능 향상의 일부는 다음과 같아요:
 
-- Introducing form state subscription model through the proxy
-- Avoiding unnecessary computation
-- Isolating component re-rendering when required
+- 프록시를 통한 폼 상태 구독 모델 도입
+- 불필요한 계산 피하기
+- 필요한 경우 컴포넌트 리랜더링 격리
 
-Overall, it improves the user experience while users interact with the application. As for the developers, we introduce built-in validation and are closely aligned with HTML standards allowing further extension with powerful validation methods and integration with schema validation natively. In addition, having a strongly type-checked form with the help of typescript provides early build-time feedback to help and guide the developer to build a robust form solution.
+전반적으로 사용자가 애플리케이션과 상호 작용하는 동안 사용자 경험을 향상시켜요. 개발자 측면에서는 내장된 검증을 소개하고 HTML 표준과 밀접하게 조화되어 강력한 벨리데이션 방법과 스키마 벨리데이션과의 네이티브 통합으로 더 확장할 수 있도록 하고 있어요. 또한 TypeScript의 도움을 받아 강력하게 타입 체크된 폼을 가지고 있으면, 개발자에게 초기 빌드 시간 피드백을 제공하여 견고한 폼 솔루션을 구축하도록 도와줍니다.
 
-The following talk given by [Bill](https://twitter.com/bluebill1049) showcased some of the ideas and design patterns:
+다음 Bill이 제공한 발표에서는 몇 가지 아이디어와 디자인 패턴을 보여줬어요:
 
 <YouTube youTubeId="ZFxHdpzaEmM" />
