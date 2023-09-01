@@ -1,87 +1,86 @@
 import typographyStyles from "../styles/typography.module.css"
 
 export default {
-  title: "React Hook Form - performant, flexible and extensible form library",
-  description: "React hook for form validation without the hassle",
+  title:
+    "React Hook Form - 성능이 좋고 유연하며 확장 가능한 폼을 다루는 라이브러리",
+  description: "어려움없이 폼 내의 벨리데이션을 검증할 수 있어요.",
 
   slogan:
-    "Performant, flexible and extensible forms with easy-to-use validation.",
-  getStarted: "Get Started",
+    "성능이 좋고, 유연하며 확장 가능한 폼에 사용하기 쉬운 벨리데이션 기능이 포함되어 있어요.",
+  getStarted: "시작",
   demo: "Demo",
   findInteresting: {
-    heading: "Ready to get started?",
+    heading: "시작할 준비가 되셨나요?",
     description: (
       <p className={typographyStyles.homeParagraph}>
-        Form handling doesn't have to be painful. React Hook Form will help you
-        write less code while achieving better performance.
+        폼 처리는 까다롭지 않아야 합니다. React Hook Form은 더 적은 코드로 더
+        나은 성능을 달성하는 데 도움을 줍니다.
       </p>
     ),
   },
   features: [
     {
-      title: "DX",
+      title: "개발자경험(DX)",
       description: `Intuitive, feature-complete API providing a seamless experience to developers when building forms.`,
     },
     {
-      title: "HTML standard",
-      description: `Leverage existing HTML markup and validate your forms with our constraint-based validation API.`,
+      title: "HTML 표준",
+      description: `기존의 HTML 마크업을 활용하고, 우리의 제약 기반 벨리데이션 API로 폼을 검증하세요.`,
     },
     {
-      title: "Super Light",
-      description: `Package size matters. React Hook Form is a tiny library without any dependencies.`,
+      title: "매우 가벼워요",
+      description:
+        "패키지 크기는 중요합니다. React Hook Form은 어떤 의존성도 없는 작은 라이브러리예요.",
     },
     {
-      title: "Performance",
-      description: `Minimizes the number of re-renders, minimizes validate computation, and faster mounting.`,
+      title: "성능",
+      description: `리랜더링을 최소화하고, 검증 계산을 최소화하며, 마운팅 속도를 더 빠르게 해요.`,
     },
     {
-      title: "Adoptable",
-      description: `Since form state is inherently local, it can be easily adopted without other dependencies.`,
+      title: "적용 가능성",
+      description: `폼의 상태는 본질적으로 지역적이므로, 다른 의존성 없이 쉽게 적용할 수 있어요.`,
     },
     {
-      title: "UX",
-      description: `Striving to provide the best user experience and bringing consistent validation strategies.
-`,
+      title: "(사용자 경험)UX",
+      description:
+        "최상의 사용자 경험을 제공하기 위해 노력하며, 내부적으로 일관된 벨리데이션 전략을 사용하고 있어요.",
     },
   ],
   codeComparison: {
-    title: "Less code. More performant",
+    title: "더 적은 코드로, 더 나은 성능을 경험하세요.",
     description: (
       <p id="codeComparison" className={typographyStyles.homeParagraph}>
-        React Hook Form reduces the amount of code you need to write while
-        removing unnecessary re-renders. Now dive in and explore with the
-        following example:
+        React Hook Form은 작성해야 할 코드의 양을 줄이면서 불필요한 리랜더링을
+        발생시키지 않아요. 아래 예제로 들어가서 바로 경험해보세요.
       </p>
     ),
   },
   isolateRender: {
-    title: "Isolate Re-renders",
+    title: "리랜더링을 분리해요.",
     description: (
       <>
         <p className={typographyStyles.homeParagraph}>
-          You have the ability to isolate component re-renders which leads to
-          better performance on your page or app. The following example
-          demonstrates this:
+          컴포넌트단위로 리랜더링을 분리할 수 있어, 페이지나 앱의 성능 향상에
+          기여합니다. 아래 예제에서 이를 확인할 수 있어요.
         </p>
       </>
     ),
   },
   watcher: {
-    title: "Subscriptions",
+    title: "구독",
     description: (
       <p className={typographyStyles.homeParagraph}>
-        Performance is an important aspect of user experience in terms of
-        building forms. You will have the ability to subscribe to individual
-        input and form State update without re-rendering the entire form.
+        성능은 폼을 구축할 때 사용자 경험의 중요한 측면이에요. 전체 폼을 다시
+        렌더링하지 않고 개별 입력 및 폼 상태 업데이트를 구독할 수 있어요.
       </p>
     ),
   },
   mount: {
-    title: "Faster Mounting",
+    title: "빠른 마운트",
     description: (
       <p className={typographyStyles.homeParagraph}>
-        The following screenshots demonstrate how much faster component mounting
-        is with React Hook Form compared to others:
+        다음 스크린샷은 React Hook Form을 사용할 때 다른 것들에 비해 얼마나
+        빠르게 컴포넌트가 마운트되는지 보여줘요.
       </p>
     ),
     totalMount: "No. of mount(s)",
@@ -91,18 +90,18 @@ export default {
   liveDemo: {
     description: (
       <>
-        The following form demonstrates form validation in action. Each column
-        represents what has been captured in the custom hook. You can also
-        change fields in the form by clicking the <strong>EDIT</strong> button.
+        아래의 폼은 폼 검증이 어떻게 작동하는지 보여줘요. 각 열은 커스텀 훅에서
+        어떤 것이 캡처되었는지 나타내요. <strong>수정</strong> 버튼을 클릭하여
+        폼의 필드를 변경할 수도 있어요.
       </>
     ),
-    submit: "Submit",
+    submit: "제출",
     watchTitle: "Watch",
     errorTitle: "Errors",
     touchedTitle: "Touched",
-    watch: "Change inputs value to update watched values",
-    error: "Validation errors will appear here",
-    touched: "Touched fields will display here",
+    watch: "입력값을 변경하면 관찰되는 값(watched value)이 업데이트돼요.",
+    error: "벨리데이션 오류가 여기에 표시돼요.",
+    touched: "터치된 필드는 이곳에 나타나요.",
   },
   validationResolver: {
     title: "resolver",
