@@ -8,7 +8,7 @@ export default {
   slogan:
     "성능이 좋고, 유연하며 확장 가능한 폼에 사용하기 쉬운 벨리데이션 기능이 포함되어 있어요.",
   getStarted: "시작",
-  demo: "Demo",
+  demo: "데모",
   findInteresting: {
     heading: "시작할 준비가 되셨나요?",
     description: (
@@ -21,7 +21,7 @@ export default {
   features: [
     {
       title: "개발자경험(DX)",
-      description: `Intuitive, feature-complete API providing a seamless experience to developers when building forms.`,
+      description: `직관적이고 기능이 완벽한 API는 개발자들이 폼을 구축할 때 원활한(seamless) 경험을 제공합니다.`,
     },
     {
       title: "HTML 표준",
