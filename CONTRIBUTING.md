@@ -1,37 +1,37 @@
-# Contributing to `React Hook Form` (The Docs)
+# `React Hook Form`에 기여하기 (한국 번역 문서)
 
-As the creators and maintainers of this project, we want to ensure that `react-hook-form` lives and continues to grow and evolve. We would like to encourage everyone to help and support this library by contributing.
+이 프로젝트의 유지 관리자로서, `react-hook-form` 한국어 문서가 계속 성장하고 발전하는 것을 보장하고 싶습니다.
 
-## Code contributions
+## 코드 기여
 
-Here is a quick guide to doing code contributions to the library.
+라이브러리에 코드 기여를 하는 빠른 가이드입니다.
 
-1. Fork and clone the repo to your local machine `git clone https://github.com/YOUR_GITHUB_USERNAME/website.git`
+1. 내 로컬 기기로 저장소를 포크하고 클론하세요: `git clone https://github.com/YOUR_GITHUB_USERNAME/website.git`
 
-2. Create a new branch from `master` with a meaningful name for a new feature or an issue you want to work on: `git checkout -b your-meaningful-branch-name`
+2. 새로운 기능이나 작업하고 싶은 이슈에 대한 의미 있는 이름으로 `main`에서 새 브랜치를 생성하세요: `git checkout -b your-meaningful-branch-name`
 
-3. Install packages by running:
+3. 패키지를 설치하려면 다음을 실행하세요:
 
    > yarn
 
-4. Startup a local version of the docs
+4. 문서의 로컬 버전을 시작하세요:
 
-   > yarn start
+   > yarn dev
 
-5. Ensure your code is formatted properly
+5. 코드가 올바르게 포맷되었는지 확인하세요:
 
    > yarn format
 
-6. Push your branch: `git push -u origin your-meaningful-branch-name`
+6. 브랜치를 푸시하세요: `git push -u origin your-meaningful-branch-name`
 
-7. Submit a pull request to the upstream react-hook-form repository.
+7. 상위 react-hook-form 저장소에 풀 리퀘스트를 제출하세요.
 
-8. Choose a descriptive title and describe your changes briefly.
+8. 적절한 제목을 선택하고 변경 사항을 간단히 설명하세요.
 
-## Coding style
+## 코딩 스타일
 
-Please follow the coding style of the project. React Hook Form uses prettier. If possible, enable the prettier plugin in your editor to get real-time feedback. The formatting can be run manually with the following command: `yarn format`
+프로젝트의 코딩 스타일을 따라 주세요. React Hook Form은 prettier를 사용합니다. 가능하다면, 에디터에서 prettier 플러그인을 활성화하여 실시간 피드백을 받아보세요. 포맷팅은 다음 명령어로 수동으로 실행할 수 있습니다: `yarn format`
 
-## License
+## 라이센스
 
-By contributing your code to the react-hook-form GitHub repository, you agree to license your contribution under the MIT license.
+MIT 라이센스에 기반합니다.

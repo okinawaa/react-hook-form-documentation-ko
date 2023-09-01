@@ -6,7 +6,11 @@
     </p>
 </div>
 
-<p align="center">Performant, flexible and extensible forms with easy to use validation.</p>
+<p align="center">성능이 좋고 유연하며 확장 가능한 폼으로, 사용하기 쉬운 벨리데이션 기능이 포함되어 있습니다.</p>
+
+## 번역 원칙
+
+영어가 더 전달하기 좋다고 판단하면 한국어로 굳이 번역하지 않고, 영어 그대로를 사용합니다.
 
 ## Install
 
