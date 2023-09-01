@@ -242,11 +242,11 @@ export const tsLinks: Pages = [
 
 export const getStartedLinks: Pages = [
   {
-    name: "Quick start",
+    name: "설치",
     pathname: "#Quickstart",
   },
   {
-    name: "React Web Video Tutorial",
+    name: "비디오 튜토리얼",
     pathname: "#ReactWebVideoTutorial",
   },
   {
@@ -254,35 +254,35 @@ export const getStartedLinks: Pages = [
     pathname: "#Registerfields",
   },
   {
-    name: "Apply validation",
+    name: "벨리데이션 적용하기",
     pathname: "#Applyvalidation",
   },
   {
-    name: "Integrating an existing form",
+    name: "기존폼에 RHF 사용하기",
     pathname: "#Integratinganexistingform",
   },
   {
-    name: "Integrating with UI libraries",
+    name: "UI 라이브러리와 통합하기",
     pathname: "#IntegratingwithUIlibraries",
   },
   {
-    name: "Integrating Controlled Inputs",
+    name: "Controlled Inputs과 통합하기",
     pathname: "#IntegratingControlledInputs",
   },
   {
-    name: "Integrating with global state",
+    name: "전역 상태관리 툴과 통합하기",
     pathname: "#Integratingwithglobalstate",
   },
   {
-    name: "Integrating with services",
+    name: "서비스와 통합하기",
     pathname: "#Integratingwithservices",
   },
   {
-    name: "Handle errors",
+    name: "에러 다루기",
     pathname: "#Handleerrors",
   },
   {
-    name: "Schema Validation",
+    name: "스키마(Schema) 벨리데이션",
     pathname: "#SchemaValidation",
   },
   {
@@ -294,7 +294,7 @@ export const getStartedLinks: Pages = [
     pathname: "#TypeScript",
   },
   {
-    name: "Design and philosophy",
+    name: "디자인 철학",
     pathname: "#Designandphilosophy",
   },
 ]
