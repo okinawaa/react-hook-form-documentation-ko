@@ -1,12 +1,12 @@
 ---
 title: Get Started
-description: Simple form validation with React Hook Form.
+description: React Hook Form을 사용한 간단한 폼 벨리데이션.
 sidebar: getStartedLinks
 ---
 
-## Installation {#Quickstart}
+## 설치 {#Quickstart}
 
-Installing React Hook Form only takes a single command and you're ready to roll.
+React Hook Form을 설치하는 것은 단 한 줄의 명령어로 가능해요.
 
 ```bash copy
 npm install react-hook-form
@@ -14,7 +14,7 @@ npm install react-hook-form
 
 ## Example
 
-The following code excerpt demonstrates a basic usage example:
+다음 코드들은 기본 사용 예시를 보여줘요:
 
 <TabGroup buttonLabels={["TS", "JS"]}>
 
@@ -35,18 +35,18 @@ export default function App() {
   } = useForm<Inputs>()
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
 
-  console.log(watch("example")) // watch input value by passing the name of it
+  console.log(watch("example")) // 해당 이름을 가진 input의 값을 감시해요
 
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
+    /* "handleSubmit"은 "onSubmit"을 호출하기 전에 입력값을 검증할 거에요 */
     <form onSubmit={handleSubmit(onSubmit)}>
-      {/* register your input into the hook by invoking the "register" function */}
+      {/* "register" 함수를 호출하여 input을 hook에 등록해요 */}
       <input defaultValue="test" {...register("example")} />
 
-      {/* include validation with required or other standard HTML validation rules */}
+      {/* 필수 항목이나 다른 표준 HTML 검증 규칙을 포함해요 */}
       <input {...register("exampleRequired", { required: true })} />
-      {/* errors will return when field validation fails  */}
-      {errors.exampleRequired && <span>This field is required</span>}
+      {/* 필드 검증에 실패하면 오류가 반환돼요 */}
+      {errors.exampleRequired && <span>이 필드는 필수 항목이에요</span>}
 
       <input type="submit" />
     </form>
@@ -67,18 +67,18 @@ export default function App() {
 
   const onSubmit = (data) => console.log(data)
 
-  console.log(watch("example")) // watch input value by passing the name of it
+  console.log(watch("example")) // 해당 이름을 가진 input의 값을 감시해요
 
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
+    /* "handleSubmit"은 "onSubmit"을 호출하기 전에 입력값을 검증해요 */
     <form onSubmit={handleSubmit(onSubmit)}>
-      {/* register your input into the hook by invoking the "register" function */}
+      {/* "register" 함수를 호출하여 input을 hook에 등록해요 */}
       <input defaultValue="test" {...register("example")} />
 
-      {/* include validation with required or other standard HTML validation rules */}
+      {/* 필수 항목이나 다른 표준 HTML 검증 규칙을 포함해요 */}
       <input {...register("exampleRequired", { required: true })} />
-      {/* errors will return when field validation fails  */}
-      {errors.exampleRequired && <span>This field is required</span>}
+      {/* 필드 검증에 실패하면 오류가 반환돼요 */}
+      {errors.exampleRequired && <span>이 필드는 필수 항목이에요</span>}
 
       <input type="submit" />
     </form>
@@ -90,15 +90,15 @@ export default function App() {
 
 ## React Web Video Tutorial {#ReactWebVideoTutorial}
 
-This video tutorial illustrates the basic usage and concepts of React Hook Form.
+이 비디오 튜토리얼은 React Hook Form의 기본 사용법과 개념을 설명해요.
 
 <YouTube youTubeId="RkXv4AXXC_4" />
 
 ## Register fields {#Registerfields}
 
-One of the key concepts in React Hook Form is to **`register`** your component into the hook. This will make its value available for both the form validation and submission.
+React Hook Form의 핵심 개념 중 하나는 컴포넌트를 훅에 **register**하는 것이에요. 이렇게 하면 그 값이 폼 벨리데이션과 제출에 모두 사용될 수 있어요.
 
-**Note:** Each field is **required** to have a `name` as a key for the registration process.
+**참고**: register 과정에서 각 필드는 name을 키로 반드시 가지고 있어야 해요.
 
 {/* JSTSCopy [CodeSandbox JS](https://codesandbox.io/s/react-hook-form-get-started-smspp) */}
 
@@ -162,11 +162,11 @@ export default function App() {
 
 </ TabGroup>
 
-## Apply validation {#Applyvalidation}
+## 벨리데이션 적용하기 {#Applyvalidation}
 
-React Hook Form makes form validation easy by aligning with the existing [HTML standard for form validation](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation).
+React Hook Form은 [폼 검증을 위한 기존 HTML 표준](https://developer.mozilla.org/ko/docs/Learn/HTML/Forms/Form_validation)과 맞춤으로 폼 검증을 쉽게 만들어요.
 
-List of validation rules supported:
+지원되는 검증 규칙 목록:
 
 - required
 - min
@@ -176,7 +176,7 @@ List of validation rules supported:
 - pattern
 - validate
 
-You can read more detail on each rule in the [register section](/docs#register).
+각 규칙에 대한 자세한 내용은 [register 섹션](/docs#register)에서 읽을 수 있어요.
 
 <TabGroup buttonLabels={["TS", "JS"]} >
 
@@ -224,9 +224,9 @@ export default function App() {
 
 </TabGroup>
 
-## Integrating an existing form {#Integratinganexistingform}
+## 기존폼에 RHF 사용하기 {#Integratinganexistingform}
 
-Integrating an existing form should be simple. The important step is to `register` the component's `ref` and assign relevant props to your input.
+기존 폼을 통합하는 것은 간단해야 해요. 중요한 단계는 컴포넌트의 ref를 register하고 입력란에 관련 props를 할당하는 것이에요.
 
 <TabGroup buttonLabels={["TS", "JS"]} >
 
