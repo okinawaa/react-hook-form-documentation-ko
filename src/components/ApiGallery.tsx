@@ -1,24 +1,13 @@
-import { useEffect } from "react"
 import Link from "next/link"
-import Footer from "./Footer"
+import { useRouter } from "next/router"
+import { useEffect } from "react"
+import containerStyles from "../styles/container.module.css"
 import typographyStyles from "../styles/typography.module.css"
 import styles from "./ApiGallery.module.css"
-import containerStyles from "../styles/container.module.css"
-import headerStyles from "./Header.module.css"
-import { useRouter } from "next/router"
+import Footer from "./Footer"
 
 export default function ApiGallery() {
   const router = useRouter()
-
-  const onChange = (e) => {
-    const version = parseInt(e.target.value)
-
-    if (version !== 7) {
-      router.push(`https://legacy.react-hook-form.com/v${version}/api`)
-    } else {
-      router.push(`/v${version}/docs/`)
-    }
-  }
 
   useEffect(() => {
     const name = window.location.hash.toLowerCase().slice(1)
@@ -55,7 +44,7 @@ export default function ApiGallery() {
         API
       </h1>
       <p className={typographyStyles.subHeading}>
-        React Hook Form's API overview
+        React Hook Form's 의 전반적인 API 목록들이에요.
       </p>
 
       <main className={styles.root}>
@@ -66,10 +55,13 @@ export default function ApiGallery() {
                 <code>{`</>`}</code>useForm
               </h3>
               <p>
-                A powerful custom hook to validate your form with minimal
-                re-renders.
+                최소한의 리랜더링을 유발하며, 강력한 커스텀 훅으로 폼을
+                유효성검사해요.
               </p>
-              <Link href="/docs/useform" aria-label="read more about useForm">
+              <Link
+                href="/docs/useform"
+                aria-label="useForm에 대해 더 읽어보기"
+              >
                 Read More ▸
               </Link>
             </div>
@@ -80,12 +72,12 @@ export default function ApiGallery() {
                 <code>{`</>`}</code>useController
               </h3>
               <p>
-                For Controlled components: interface with the useForm methods
-                and isolate its re-render.
+                제어(Controlled) 컴포넌트를 위한 훅이에요. useForm의 메소드와
+                연결되어 있어요. 리랜더링을 분리시켜요.
               </p>
               <Link
                 href="/docs/usecontroller"
-                aria-label="read more about useController"
+                aria-label="useController에 대해 더 읽어보기"
               >
                 Read More ▸
               </Link>
@@ -97,13 +89,13 @@ export default function ApiGallery() {
                 <code>{`</>`}</code>useFormContext
               </h3>
               <p>
-                Access your useForm methods and properties from nested
-                components. Great for building larger forms and shared
-                components!
+                중첩된(nested) 컴포넌트에서 useForm의 메소드와 속성들을 접근할
+                수 있어요. 큰 폼과 많은 곳에서 사용되는 공유 컴포넌트를 만들 때
+                유용해요!
               </p>
               <Link
                 href="/docs/useformcontext"
-                aria-label="read more about useformcontext"
+                aria-label="useFormContext에 대해 더 읽어보기"
               >
                 Read More ▸
               </Link>
@@ -115,10 +107,10 @@ export default function ApiGallery() {
                 <code>{`</>`}</code>useWatch
               </h3>
               <p>
-                Subscribe to individual form input changes without impacting the
-                root component's render.
+                루트 컴포넌트의 렌더링에 영향을 주지 않으면서 개별 폼 입력
+                변경을 구독(subscribe)하세요.
               </p>
-              <Link href="/docs/usewatch" aria-label="read more about usewatch">
+              <Link href="/docs/usewatch" aria-label="usewatch에 대해 읽어보기">
                 Read More ▸
               </Link>
             </div>
@@ -129,12 +121,12 @@ export default function ApiGallery() {
                 <code>{`</>`}</code>useFormState
               </h3>
               <p>
-                Subscribe to individual form state updates and isolating
-                re-renders at the hook level.
+                폼의 상태를 구독(subscribe)하고, 리랜더링을 분리시켜요. 훅
+                레벨에서 처리할 수 있어서 유용해요.
               </p>
               <Link
                 href="/docs/useformstate"
-                aria-label="read more about useformstate"
+                aria-label="useformstate에 대해서 읽어보기"
               >
                 Read More ▸
               </Link>
@@ -146,55 +138,19 @@ export default function ApiGallery() {
                 <code>{`</>`}</code>useFieldArray
               </h3>
               <p>
-                Manage dynamically generated fields on the fly, shuffle, remove
-                and append fields. Ideal for complex CRUD data entry scenarios.
+                동적으로 생성된 필드를 실시간으로 관리하고, 필드를 재배열하고,
+                제거하고, 추가하세요. 복잡한 CRUD 데이터 입력 시나리오에
+                이상적이에요.
               </p>
               <Link
                 href="/docs/usefieldarray"
-                aria-label="read more about usefieldarray"
+                aria-label="usefieldarray에 대해 읽어보기"
               >
                 Read More ▸
               </Link>
             </div>
           </li>
         </ul>
-
-        <div className={styles.versionControl}>
-          <p>Switch Version: </p>
-          <div
-            className={`${headerStyles.toggleGroup} ${headerStyles.smallToggleGroup}`}
-          >
-            <button
-              disabled
-              role="tab"
-              aria-label="show v7 doc"
-              aria-selected="false"
-              aria-controls="tabPanel-2"
-            >
-              V7
-            </button>
-            <button
-              onClick={onChange}
-              value="6"
-              role="tab"
-              aria-label="show v6 doc"
-              aria-selected="false"
-              aria-controls="tabPanel-2"
-            >
-              V6
-            </button>
-            <button
-              onClick={onChange}
-              value="5"
-              aria-label="show v5 doc"
-              aria-selected="true"
-              aria-controls="tabPanel-1"
-              role="tab"
-            >
-              V5
-            </button>
-          </div>
-        </div>
       </main>
 
       <Footer />

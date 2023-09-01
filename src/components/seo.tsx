@@ -2,13 +2,12 @@ import Head from "next/head"
 
 const site = {
   siteMetadata: {
-    title: `React Hook Form - Simple React forms validation`,
-    description: `Performant, flexible and extensible forms with easy-to-use validation.`,
+    title: `React Hook Form - 간단한 리액트 폼 벨리데이션`,
+    description: `성능이 우수하고 유연하며 확장 가능한 폼과 쉬운 사용자 정의 벨리데이션을 제공합니다.`,
     author: `@bluebill1049`,
     siteUrl: "https://www.react-hook-form.com",
     languages: {
-      langs: ["en", "es", "jp", "zh", "kr", "pt", "ru"],
-      defaultLangKey: "en",
+      defaultLangKey: "ko",
     },
   },
 }
@@ -26,7 +25,7 @@ function SEO({ title, description }: { title: string; description?: string }) {
       />
       <meta
         name="twitter:description"
-        content="Performant, flexible and extensible forms with easy-to-use validation."
+        content="성능이 우수하고 유연하며 확장 가능한 폼과 쉬운 사용자 정의 벨리데이션을 제공합니다."
       ></meta>
       <meta name="twitter:creator" content={site.siteMetadata.author}></meta>
       <meta
@@ -37,7 +36,7 @@ function SEO({ title, description }: { title: string; description?: string }) {
       <meta property="og:type" content="website"></meta>
       <meta
         property="og:description"
-        content="Performant, flexible and extensible forms with easy-to-use validation."
+        content="성능이 우수하고 유연하며 확장 가능한 폼과 쉬운 사용자 정의 벨리데이션을 제공합니다."
       ></meta>
       <meta
         property="og:image"
