@@ -4,7 +4,7 @@ description: List of exported Typescript Types.
 sidebar: tsLinks
 ---
 
-**Important:** Typescript ^4.3 above is the recommended version to work with react hook form.
+**중요:** Typescript ^4.3 이상 버전을 사용해주세요.
 
 ## \</> Resolver {#Resolver}
 
@@ -388,7 +388,7 @@ export type Field = {
 
 ## \</> FieldPath {#FieldPath}
 
-This type is useful when you define custom component's `name` prop, and it will type check again your field path.
+이 타입은 커스텀 컴포넌트의 name 속성을 정의할 때 유용하며, 필드 경로에 대해 다시 타입 체크합니다.
 
 ```typescript copy
 export type FieldPath<TFieldValues extends FieldValues> = Path<TFieldValues>
@@ -398,7 +398,7 @@ export type FieldPath<TFieldValues extends FieldValues> = Path<TFieldValues>
 
 ## \</> FieldPathByValue {#FieldPathByValue}
 
-This type will return union with all available paths that match the passed value
+이 타입은 전달된 값과 일치하는 모든 가능한 경로와의 유니온을 반환합니다.
 
 ```typescript copy
 function Field<

@@ -1,14 +1,14 @@
 ---
-title: Advanced Usage
-description: Build complex and accessible forms
+title: 고급 사용법
+description: 어떻게 복잡하고 접근성 높은 폼을 설계하는지 배워봐요
 sidebar: advancedLinks
 ---
 
-## Accessibility (A11y) {#AccessibilityA11y}
+## Accessibility(접근성) (A11y) {#AccessibilityA11y}
 
-React Hook Form has support for native form validation, which lets you validate inputs with your own rules. Since most of us have to build forms with custom designs and layouts, it is our responsibility to make sure those are accessible (A11y).
+React Hook Form은 네이티브 폼 벨리데이션을 지원하며, 여러분만의 규칙으로 입력을 벨리데이션 할 수 있게 해줘요. 대부분의 경우 우리는 커스텀 디자인과 레이아웃을 가진 폼을 만들어야 하는데, 이러한 부분이 접근성(A11y)을 보장하는 것은 우리의 책임이에요.
 
-The following code example works as intended for validation; however, it can be improved for accessibility.
+다음 코드 예제는 벨리데이션을 위해 의도된 대로 작동하지만, 접근성을 개선할 수 있어요.
 
 ```javascript copy
 import React from "react"
@@ -41,7 +41,7 @@ export default function App() {
 }
 ```
 
-The following code example is an improved version by leveraging [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA).
+다음 코드 예제는 개선된 버전으로서 다음과 같이 발전시켰습니다.[ARIA를 사용했어요](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA).
 
 ```javascript copy
 import { useForm } from "react-hook-form"
@@ -79,7 +79,7 @@ export default function App() {
 }
 ```
 
-After this improvement, the screen reader will say: _“Name, edit, invalid entry, This is required.”_
+이 개선 이후 스크린리더는 다음과 같이 작동할거에요: _“Name, edit, invalid entry, This is required.”_
 
 ---
 

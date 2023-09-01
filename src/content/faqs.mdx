@@ -1,18 +1,19 @@
 ---
 title: FAQs
-description: Frequently asked questions
+description: 자주 묻는 질문
 sidebar: faqLinks
 ---
 
-## Performance of React Hook Form {#PerformanceofReactHookForm}
+## React Hook Form의 성능 {#PerformanceofReactHookForm}
 
-Performance is one of the primary reasons why this library was created. React Hook Form relies on an uncontrolled form, which is the reason why the `register` function captures `ref` and the controlled component has its re-rendering scope with `Controller` or `useController`. This approach reduces the amount of re-rendering that occurs due to a user typing in an input or other form values changing at the root of your form or applications. Components mount to the page faster than controlled components because they have less overhead. As a reference, there is a quick comparison test that you can refer to at [this repo link](https://github.com/bluebill1049/react-hook-form-performance-compare).
+성능은 이 라이브러리가 생성된 주요한 이유 중 하나입니다. React Hook Form은 비제어(Uncontrolled) 폼에 의존하며, 이것이 `register` 함수가 `ref`를 캡처(스냅샷), 제어 컴포넌트는 `Controller`나 `useController`를 통해 리랜더링 범위를 가지는 이유입니다.
+이 방식은 사용자가 입력을 타이핑하거나 다른 폼 값이 폼이나 애플리케이션의 루트에서 변경되어 발생하는 리랜더링 양을 줄입니다. 컴포넌트가 제어 컴포넌트보다 페이지에 더 빠르게 마운트되며, 이는 더 적은 오버헤드를 가지기 때문입니다. 참고로, 빠른 비교 테스트가 [이 저장소 링크](https://github.com/bluebill1049/react-hook-form-performance-compare)에서 확인할 수 있습니다.
 
 ---
 
 ## How to create an accessible input error and message? {#Howtocreateanaccessibleinputerrorandmessage}
 
-React Hook Form is based on [Uncontrolled Components](https://reactjs.org/docs/uncontrolled-components.html), which gives you the ability to easily build an accessible custom form.
+React Hook Form은 Uncontrolled Components를 기반으로 하며, 이를 통해 접근성 있는 커스텀 폼을 쉽게 구축할 수 있습니다.
 
 ```javascript copy
 import React from "react"
@@ -44,11 +45,13 @@ export default function App() {
 
 ---
 
-## Does it work with Class Components? {#DoesitworkwithClassComponents}
+## 클래스형 컴포넌트에서도 작동하나요? {#DoesitworkwithClassComponents}
 
-No, not out of the box. If you want to do this, you can build a wrapper around it and use it in your Class Component.
+아니요, 기본적으로는 그렇지 않습니다. 이를 위해 해당 라이브러리는 래퍼(wrapper)를 만들고 이를 클래스 컴포넌트에서 사용하는 방식으로 처리할 수 있습니다.
 
-> You can’t use Hooks inside of a class component, but you can definitely mix classes and function components with Hooks in a single tree. Whether a component is a class or a function that uses Hooks is simply an implementation detail of that component. In the longer term, we expect Hooks to be the primary way people write React components.
+아니요, 기본적으로는 그렇지 않습니다. 이를 위해 해당 라이브러리는 래퍼(wrapper)를 만들고 이를 클래스 컴포넌트에서 사용하는 방식으로 처리할 수 있습니다.
+
+> 클래스 컴포넌트 내부에서는 훅(Hooks)을 사용할 수 없지만, 클래스와 함수 컴포넌트를 동시에 하나의 트리 안에서 함께 사용할 수 있습니다. 컴포넌트가 클래스인지 훅을 사용하는 함수 컴포넌트인지는 해당 컴포넌트의 구현 세부 사항일 뿐입니다. 장기적으로 보면 훅이 사람들이 React 컴포넌트를 작성하는 주요 방법이 될 것으로 예상됩니다.
 
 ---
 

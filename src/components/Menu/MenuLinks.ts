@@ -49,15 +49,15 @@ export const advancedLinks: Pages = [
 
 export const faqLinks: Pages = [
   {
-    name: "Performance of React Hook Form",
+    name: "React Hook Form의 성능",
     pathname: "#PerformanceofReactHookForm",
   },
   {
-    name: "How to create an accessible input error and message?",
+    name: "접근성 높은 Input 에러와 메시지를 보여주는 방법",
     pathname: "#Howtocreateanaccessibleinputerrorandmessage",
   },
   {
-    name: "Does it work with Class Components?",
+    name: "클래스형 컴포넌트에서도 작동하나요?",
     pathname: "#DoesitworkwithClassComponents",
   },
   {

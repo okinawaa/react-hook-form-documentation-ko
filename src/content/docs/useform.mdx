@@ -1,6 +1,6 @@
 ---
 title: useForm
-description: React hooks for form validation
+description: 폼 검증을 위한 리액트 훅
 sidebar: apiLinks
 ---
 
@@ -75,35 +75,35 @@ sidebar: apiLinks
 
 ## \</> `useForm:` [`UseFormProps`](/ts#UseFormProps)
 
-`useForm` is a custom hook for managing forms with ease. It takes one object as **optional** argument. The following example demonstrates all of its properties along with their default values.
+`useForm`은 폼을 쉽게 관리하기 위한 커스텀 훅입니다. **선택적** 인자로 하나의 객체를 받습니다. 다음 예제는 해당 속성들과 기본값을 함께 보여줍니다.
 
 **Generic props:**
 
-| Option                                                  | Description                                                       |
-| ------------------------------------------------------- | ----------------------------------------------------------------- |
-| [mode](#mode)                                           | Validation strategy **before** submitting behaviour.              |
-| [reValidateMode](#reValidateMode)                       | Validation strategy **after** submitting behaviour.               |
-| [defaultValues](#defaultValues)                         | Default values for the form.                                      |
-| [values](#values)                                       | Reactive values to update the form values.                        |
-| [resetOptions](#resetOptions)                           | Option to reset form state update while updating new form values. |
-| [criteriaMode](#criteriaMode)                           | Display all validation errors or one at a time.                   |
-| [shouldFocusError](#shouldFocusError)                   | Enable or disable built-in focus management.                      |
-| [delayError](#delayError)                               | Delay error from appearing instantly.                             |
-| [shouldUseNativeValidation](#shouldUseNativeValidation) | Use browser built-in form constraint API.                         |
-| [shouldUnregister](#shouldUnregister)                   | Enable and disable input unregister after unmount.                |
+| Option                                                  | Description                                                     |
+| ------------------------------------------------------- | --------------------------------------------------------------- |
+| [mode](#mode)                                           | 폼 제출 **전** 벨리데이션을 어떻게 처리할지 결정해요            |
+| [reValidateMode](#reValidateMode)                       | 폼 제출 **후** 벨리데이션을 어떻게 처리할지 결정해요            |
+| [defaultValues](#defaultValues)                         | 폼의 기본 값들(Default values)이에요                            |
+| [values](#values)                                       | 폼 값들을 업데이트 하기 위한 반응형(reactive) 값                |
+| [resetOptions](#resetOptions)                           | 새로운 폼 값들을 업데이트 하는 동안 폼의 상태를 리셋해주는 옵션 |
+| [criteriaMode](#criteriaMode)                           | 한번에 모든 벨리데이션 에러들을 보여주는 모드에요               |
+| [shouldFocusError](#shouldFocusError)                   | 사전 정의된(built-in) 포커스 관리를 활성화하거나 비활성화 해요  |
+| [delayError](#delayError)                               | 에러를 즉각적으로 보여주는대신 딜레이를 준 후 보여줘요          |
+| [shouldUseNativeValidation](#shouldUseNativeValidation) | 브라우저의 사전 정의된(built-in) 폼 제약 API를 사용해요         |
+| [shouldUnregister](#shouldUnregister)                   | 언마운트 후에 Input 언레지스터를 활성화하거나 비활성화해요      |
 
 **Schema validation props:**
 
-| Option                | Description                                               |
-| --------------------- | --------------------------------------------------------- |
-| [resolver](#resolver) | Integrates with your preferred schema validation library. |
-| [context](#context)   | A context object to supply for your schema validation.    |
+| Option                | Description                                                       |
+| --------------------- | ----------------------------------------------------------------- |
+| [resolver](#resolver) | 당신이 좋아하는 스키마(Schema) 벨리데이션 라이브러리와 통합하세요 |
+| [context](#context)   | 스키마 벨리데이션에 제공할 컨텍스트 객체에요                      |
 
 ### Props
 
 ---
 
-#### mode: <TypeText>onChange | onBlur | onSubmit | onTouched | all = 'onSubmit'</TypeText> <Popup top={3} message="React Native: compatible with Controller" /> {#mode}
+#### mode: <TypeText>onChange | onBlur | onSubmit | onTouched | all = 'onSubmit'</TypeText> <Popup top={3} message="React Native: Controller를 사용해주세요" /> {#mode}
 
 ---
 
@@ -152,7 +152,7 @@ useForm({
 - There are other options for including form data:
 
   ```javascript
-  <input {...register("hidden")} type="hidden" />
+  ;<input {...register("hidden")} type="hidden" />
   register("hidden", { value: "data" })
 
   // include data onSubmit
