@@ -1,4 +1,5 @@
 import { StateMachineProvider, createStore } from "little-state-machine"
+import { Analytics } from "@vercel/analytics/react"
 import { type AppProps } from "next/app"
 import Head from "next/head"
 import formData from "../state/formData"
@@ -42,6 +43,7 @@ function App({ Component, pageProps }: AppProps) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
+      <Analytics />
       <ThemeProvider
         attribute="class"
         defaultTheme="dark"

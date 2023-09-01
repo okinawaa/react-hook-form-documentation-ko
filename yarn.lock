@@ -1553,6 +1553,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/analytics@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@vercel/analytics@npm:1.0.2"
+  checksum: 5f596db6ed3c959057927985ffc6394ab12f9a5e9e9c65d00a33f1ffb3a7ced95d63f33b31e746939e50c0284d7999b90e9ed5d3d1e8b0d37a135219fd93a6e4
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:^1.0.0":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -6254,9 +6261,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form-website@workspace:.":
+"react-hook-form-documentation-ko@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-hook-form-website@workspace:."
+  resolution: "react-hook-form-documentation-ko@workspace:."
   dependencies:
     "@hookform/devtools": 4.3.1
     "@mdx-js/loader": ^2.3.0
@@ -6267,6 +6274,7 @@ __metadata:
     "@types/react-helmet": ^6.1.6
     "@typescript-eslint/eslint-plugin": ^5.59.11
     "@typescript-eslint/parser": ^5.59.11
+    "@vercel/analytics": ^1.0.2
     class-variance-authority: ^0.6.0
     clsx: ^1.2.1
     contentlayer: ^0.3.3
