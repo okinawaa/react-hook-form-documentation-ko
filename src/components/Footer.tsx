@@ -50,9 +50,17 @@ export default function Footer() {
         >
           <b>BEEKAI</b>
         </a>{" "}
+        <a
+          href="https://github.com/okinawaa/react-hook-form-documentaion-ko"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="BEEKAI Form builder"
+        >
+          This docs by <b>korean contributors</b>
+        </a>
         | Please support us by leaving a ★{" "}
         <a
-          href="https://github.com/react-hook-form/react-hook-form"
+          href="https://github.com/okinawaa/react-hook-form-documentaion-ko"
           target="_blank"
           rel="noreferrer noopener"
         >
